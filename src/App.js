@@ -3,7 +3,8 @@ import { FiSearch } from 'react-icons/fi'
 import  api  from './services/api';
 import './styles.css'
 function App() {
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState('');
+  const [cep, setCep] = useState({});
   
   async function handleSearch () {
 
@@ -14,7 +15,8 @@ function App() {
 
     try{
       const response = await api.get(`${input}/json`);
-      console.log(response.data);
+      setCep(response.data);
+      setInput("");
     }catch{
       alert("Erro ao buscar esta informação!");
       setInput("");
@@ -40,14 +42,18 @@ function App() {
           </button>
       </div>
 
+      {Object.keys(cep).length > 0 && (
+        
       <main>
-        <h2>CEP: 55038-190</h2>
+        <h2>CEP: {cep.cep}</h2>
 
-        <span>Rua Santa Maria da boa vista</span>
-        <span>Complemento</span>
-        <span>Boa vista 2</span>
-        <span>Caruaru-PE</span>
-      </main>
+        <span>{cep.logradouro}</span>
+        <span>Complemento: {cep.complemento}</span>
+        <span>Bairro: {cep.bairro}</span>
+        <span>Cidade: {cep.localidade} {cep.uf}</span>
+    
+    </main>
+      )}
 
 
 
