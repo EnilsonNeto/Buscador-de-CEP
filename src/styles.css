@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;800&display=swap');
 
 .container {
+    background: url(https://source.unsplash.com/JtqH-x81FyU/1600x900);
+    background-size: cover;
+}
+
+.border{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(#2e095f,#041026);
 }
+
 
 .title {
     font-size: 5rem;
@@ -15,6 +20,7 @@
     animation: flipTitle 2s ;
     font-family: 'Nunito', sans-serif;
     font-weight: 800;
+    text-shadow: 1px 3px 8px rgba(0,0,0,0.5);
 }
 
 @keyframes flipTitle {
@@ -104,4 +110,14 @@ main span{
     main span {
         font-size: 1.1rem;
     }
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
 }
