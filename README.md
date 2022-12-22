@@ -1,7 +1,7 @@
 # Buscador de CEP
  
 <div align="center" >
-<img src="https://github.com/EnilsonNeto/Buscador-de-CEP/blob/main/src/media/20221221212041_Trim.mp4">
+<img src="https://github.com/EnilsonNeto/Buscador-de-CEP/blob/main/src/media/20221221212041_Trim.gif">
 </div>
 
 ---
